@@ -249,7 +249,7 @@ export default function LandingPage() {
                 Schedule a free 30-minute consultation with our experts.
               </p>
               <div className="w-full max-w-sm space-y-2">
-                <Link href="https://app.reclaim.ai/m/ben-yalladevrel/quick-meeting">
+                <Link href="https://calendly.com/yalladevrel/30min">
                   <Button className="w-full bg-white text-black hover:bg-gray-200" size="lg">
                     <Calendar className="mr-2 h-4 w-4" />
                     Schedule Now
