@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Check, Laptop, Heart } from 'lucide-react';
+import { Calendar, Check, Star } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,8 +12,9 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { HeartLaptopIcon } from '@/components/HeartLaptopIcon';
+import PayPalButton from '@/components/PayPalButton';
 
-import { Lalezar, Montserrat } from 'next/font/google'; 
+import { Lalezar, Montserrat } from 'next/font/google';
 
 const lalezar = Lalezar({
   subsets: ['latin'],
@@ -22,7 +23,7 @@ const lalezar = Lalezar({
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '700'], 
+  weight: ['400', '700'],
 });
 
 export default function LandingPage() {
@@ -170,70 +171,98 @@ export default function LandingPage() {
         {/* Section: Pricing Plans */}
         <section className="container mx-auto px-4 py-12">
           <h2 className="text-4xl font-bold mb-8 text-center">Pricing Plans</h2>
-          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
-            {[
-              {
-                name: 'Developer Experience Assessment and Action Plan',
-                price: '$3,000',
-                features: [
-                  'Friction Log Analysis',
-                  'Documentation Review',
-                  'Developer Tooling Recommendations',
-                ],
-                paymentLink: 'https://www.paypal.com/ncp/payment/YPZSGHFVF9L98',
-              },
-              {
-                name: 'Developer Marketing Assessment and Action Plan',
-                price: '$3,000',
-                features: [
-                  'Market Trend Analysis',
-                  'Content Strategy Development',
-                  'Product Positioning Review',
-                ],
-                paymentLink: 'https://www.paypal.com/ncp/payment/F7HSM8ZX36QH2',
-              },
-              {
-                name: 'Developer Community Assessment and Action Plan',
-                price: '$3,000',
-                features: [
-                  'Community Engagement Metrics Review',
-                  'Community Health Check',
-                  'Growth and Retention Strategies',
-                ],
-                paymentLink: 'https://www.paypal.com/ncp/payment/QC4527ASGNGWN',
-              },
-            ].map((plan) => (
-              <Card key={plan.name} className="border-black flex flex-col">
-                <CardHeader>
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <CardDescription className="text-xl font-bold">
-                    {plan.price} all-inclusive one-time cost
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <ul className="space-y-2">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center">
-                        <Check className="mr-2 h-4 w-4" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter>
-                  <a
-                    href={plan.paymentLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full"
-                  >
-                    <Button className="w-full bg-black text-white hover:bg-gray-800">
-                      Choose Plan
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            ))}
+          <div className="space-y-6">
+            <Card className="border-black flex flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 p-6">
+                <div className="flex items-center mb-4">
+                  <h3 className="text-3xl font-bold mr-2">DevRel Ongoing Support</h3>
+                  <span className="bg-yellow-300 text-yellow-800 text-sm font-semibold px-2 py-1 rounded-full">
+                    Popular
+                  </span>
+                </div>
+                <p className="text-xl font-bold mb-4">$2,000 per month</p>
+                <ul className="space-y-2">
+                  {[
+                    'Regular monthly strategy meetings and optimizations',
+                    'Personalized recommendations based on your needs',
+                    '6 hours per month of expert DevRel support',
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-center">
+                      <Check className="mr-2 h-4 w-4" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="p-6">
+                <PayPalButton />
+              </div>
+            </Card>
+            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12">
+              {[
+                {
+                  name: 'Developer Experience Assessment and Action Plan',
+                  price: '$3,000',
+                  features: [
+                    'Friction Log Analysis',
+                    'Documentation Review',
+                    'Developer Tooling Recommendations',
+                  ],
+                  paymentLink: 'https://www.paypal.com/ncp/payment/YPZSGHFVF9L98',
+                },
+                {
+                  name: 'Developer Marketing Assessment and Action Plan',
+                  price: '$3,000',
+                  features: [
+                    'Market Trend Analysis',
+                    'Content Strategy Development',
+                    'Product Positioning Review',
+                  ],
+                  paymentLink: 'https://www.paypal.com/ncp/payment/F7HSM8ZX36QH2',
+                },
+                {
+                  name: 'Developer Community Assessment and Action Plan',
+                  price: '$3,000',
+                  features: [
+                    'Community Engagement Metrics Review',
+                    'Community Health Check',
+                    'Growth and Retention Strategies',
+                  ],
+                  paymentLink: 'https://www.paypal.com/ncp/payment/QC4527ASGNGWN',
+                },
+              ].map((plan) => (
+                <Card key={plan.name} className="border-black flex flex-col">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                    <CardDescription className="text-xl font-bold">
+                      {plan.price} all-inclusive one-time cost
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <ul className="space-y-2">
+                      {plan.features.map((feature) => (
+                        <li key={feature} className="flex items-center">
+                          <Check className="mr-2 h-4 w-4" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <a
+                      href={plan.paymentLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full"
+                    >
+                      <Button className="w-full bg-black text-white hover:bg-gray-800">
+                        Choose Plan
+                      </Button>
+                    </a>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -243,7 +272,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">Book a Consultation</h2>
               <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Ready to take your DevRel strategy to the next level? 
+                Ready to take your DevRel strategy to the next level?
               </p>
               <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Schedule a free 30-minute consultation with our experts.
