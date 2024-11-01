@@ -149,7 +149,7 @@ export default function LandingPage() {
             </h2>
             <div className="flex justify-center">
               <div className="grid grid-flow-col auto-cols-max gap-8 items-center">
-                {['Vonage', 'Parity', 'Orbit', 'Fuel', 'NewRelic'].map((client) => (
+                {['Vonage', 'Parity', 'Orbit', 'Fuel', 'NewRelic', 'Couchbase'].map((client) => (
                   <div
                     key={client}
                     className="w-32 h-32 flex items-center justify-center bg-white p-4 rounded-lg shadow-md"
@@ -185,7 +185,7 @@ export default function LandingPage() {
                   {[
                     'Regular monthly strategy meetings and optimizations',
                     'Personalized recommendations based on your needs',
-                    '6 hours per month of expert DevRel support',
+                    '5 hours per month of expert DevRel support',
                   ].map((feature) => (
                     <li key={feature} className="flex items-center">
                       <Check className="mr-2 h-4 w-4" />
