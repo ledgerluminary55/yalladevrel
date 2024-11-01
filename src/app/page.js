@@ -91,7 +91,7 @@ export default function LandingPage() {
                 </p>
                 <p>
                   <a href="https://www.bengreenberg.dev/" target="_blank" rel="noopener noreferrer">Ben Greenberg</a> 
-                  possesses extensive experience in the discipline of Developer Relations. He has led teams, 
+                   possesses extensive experience in the discipline of Developer Relations. He has led teams, 
                   established programs, and delivered measurable impact at leading organizations around the world.
                 </p>
               </div>
