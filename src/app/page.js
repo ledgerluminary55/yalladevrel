@@ -86,13 +86,13 @@ export default function LandingPage() {
                   <HeartLaptopIcon className="w-12 h-12" />
                 </div>
                 <p className="mb-4">
-                  Yalla, DevRel LLC provides Developer Relations (DevRel) services for tech firms,
+                  Yalla, DevRel LLC provides Developer Relations (DevRel) services for tech organizations,
                   drawing on the extensive expertise of its principal consultant.
                 </p>
                 <p>
-                  Ben Greenberg possesses extensive experience in the discipline of Developer
-                  Relations. He has led teams, established programs, and delivered measurable impact
-                  at leading organizations around the world.
+                  <a href="https://www.bengreenberg.dev/" target="_blank" rel="noopener noreferrer">Ben Greenberg</a> 
+                  possesses extensive experience in the discipline of Developer Relations. He has led teams, 
+                  established programs, and delivered measurable impact at leading organizations around the world.
                 </p>
               </div>
               <div>
