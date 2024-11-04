@@ -90,8 +90,8 @@ export default function LandingPage() {
                   drawing on the extensive expertise of its principal consultant.
                 </p>
                 <p>
-                  <a href="https://www.bengreenberg.dev/" target="_blank" rel="noopener noreferrer">Ben Greenberg</a> 
-                   possesses extensive experience in the discipline of Developer Relations. He has led teams, 
+                  <a href="https://www.bengreenberg.dev/" target="_blank" rel="noopener noreferrer">Ben Greenberg</a> possesses 
+                  extensive experience in the discipline of Developer Relations. He has led teams, 
                   established programs, and delivered measurable impact at leading organizations around the world.
                 </p>
               </div>
